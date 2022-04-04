@@ -1,0 +1,22 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { PastryListDetailsComponent } from './pastry-list-details/pastry-list-details.component';
+import { PastryListComponent } from './pastry-list/pastry-list.component';
+import { RegistrationFormComponent } from './registration-form/registration-form.component';
+
+
+const routes: Routes = [
+  {path:'pastry-list',
+  component:PastryListComponent},
+  {path:'pastry-list-details',
+  component:PastryListDetailsComponent},
+  {path:'registration-form',
+  component:RegistrationFormComponent},
+ 
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {}
